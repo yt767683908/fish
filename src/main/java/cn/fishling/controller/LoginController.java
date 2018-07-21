@@ -15,7 +15,7 @@ import com.alibaba.fastjson.JSON;
 import cn.fishling.service.LoginService;
 
 @Controller
-@RequestMapping("/loginController")
+@RequestMapping(value="/loginController", produces = "application/json; charset=utf-8")
 public class LoginController {
 	@Autowired()
 	private LoginService loginService;
@@ -24,8 +24,6 @@ public class LoginController {
 	@RequestMapping("/showPerson")
 	public String showPersons(@RequestParam Map<String, String> map) {
 		List<Map<String, Object>> resultMap = loginService.findUserList();;
-//		resultMap.put("1", "分分分");
-//		resultMap.put("2", "2=帮我你无法你看我吉尔菲娜客服");
 		return JSON.toJSONString(resultMap);
 	}
 }
