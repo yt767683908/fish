@@ -3,7 +3,7 @@ package tools;
 public class Tools {
 
 	public static String testFunc() {
-		String a = "ÄãºÃ";
+		String a = "å•Šä»˜æ¬¾";
 		return a;
 	}
 
