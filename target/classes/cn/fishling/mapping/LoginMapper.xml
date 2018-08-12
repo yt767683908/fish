@@ -3,6 +3,6 @@
 <mapper namespace="cn.fishling.dao.LoginMapper">
     <!-- 查询所有person -->  
     <select id="findUserList" resultType="map" >  
-        select * from user_acount  
+        select * from user
     </select>
 </mapper>
