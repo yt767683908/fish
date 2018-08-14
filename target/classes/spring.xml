@@ -15,9 +15,5 @@
 
 	<!-- 自动注入 -->
 	<context:component-scan
-		base-package="cn.fishling.service.impl" />
-	<!-- 加载properties文件 -->
-	<!-- <bean id="configProperties" class="org.springframework.beans.factory.config.PropertiesFactoryBean"> 
-		<property name="locations"> <list> <value>classpath:mysqldb.properties</value> 
-		</list> </property> </bean> -->
+		base-package="cn.fishling.business.service.impl" />
 </beans>
