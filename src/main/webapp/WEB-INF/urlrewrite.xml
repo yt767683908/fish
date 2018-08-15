@@ -1,11 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE urlrewrite PUBLIC "-//tuckey.org//DTD UrlRewrite 3.2//EN" "\\urlrewrite3.2.dtd">
 <urlrewrite>
-　　<rule>
-　　　　<note>重写index.jsp成index.html</note>
-　　　　<!-- 对应controller中redireact的路径 -->
-　　　　<from>index.html</from>
-　　　　<!-- 对应实际工程中jsp文件 -->
-　　　　<to type="forward">/index.jsp</to>
-　　</rule>
+	<rewrite
+		url="^(/.+(\.gif|\.png|\.jpg|\.ico|\.css|\.js)(\?.+)?)$" to="$1"
+		processing="stop" />
+	<rule>
+		<note>重写index.jsp成index.html</note>
+		<!-- 对应controller中redireact的路径 -->
+		<from>index.html</from>
+		<!-- 对应实际工程中jsp文件 -->
+		<to type="forward">/index.jsp</to>
+	</rule>
+	<rule>
+		<from>login.html</from>
+		<to type="forward">/login.jsp</to>
+	</rule>
 </urlrewrite>
