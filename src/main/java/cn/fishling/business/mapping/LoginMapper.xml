@@ -1,8 +1,21 @@
 <?xml version="1.0" encoding="UTF-8" ?>
  <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="cn.fishling.business.dao.LoginMapper">
-    <!-- 查询所有person -->  
-    <select id="findUserList" resultType="map" >  
-        select * from user_acount
-    </select>
+	<!-- 查询所有person -->
+	<select id="findUserList" resultType="map">
+		select * from user_acount
+	</select>
+
+	<select id="userLogin" resultType="map" parameterType="map">
+		select * from user_acount where 1=1
+		<if test="username!=null and username!=''">
+			and username=#{username}
+		</if>
+		<if test="password!=null and password !=''">
+			and password=#{password}
+		</if>
+		<if test="id !=null and id !=''">
+			and id=${id}
+		</if>
+	</select>
 </mapper>

@@ -32,10 +32,6 @@
 	<script src="js/jquery-3.3.1.js" type="text/javascript" charset="UTF-8"></script>
 	<script type='text/javascript'>
 		$(document).ready(function() {
-			init();
-		});
-
-		function init() {
 			$(".name,.pwd,#valid").keyup(function(event) {
 				if (event.keyCode == 13) {
 					$('#login').click();
@@ -51,7 +47,7 @@
 					return false;
 				} else {
 					$.ajax({
-						url : "api/public/getUsers.do",
+						url : "api/user/userLogin",
 						type : "post",
 						dataType : "json",
 						data : {
@@ -68,9 +64,8 @@
 						}
 					});
 				}
-
 			});
-		}
+		});
 	</script>
 </body>
 </html>

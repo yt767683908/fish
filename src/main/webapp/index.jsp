@@ -5,7 +5,7 @@ pageEncoding="UTF-8"%>
 	<script src="js/jquery-3.3.1.js"></script>
 	<script type="text/javascript">
 		$.ajax({
-			url:'loginController/showPerson',
+			url:'api/user/showPerson',
 			type:'post',
 			data:{data1:"哈哈",data2:"嘻嘻"},
 			async:true,

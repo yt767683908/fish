@@ -1,9 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE urlrewrite PUBLIC "-//tuckey.org//DTD UrlRewrite 3.2//EN" "\\urlrewrite3.2.dtd">
 <urlrewrite>
-	<rewrite
-		url="^(/.+(\.gif|\.png|\.jpg|\.ico|\.css|\.js)(\?.+)?)$" to="$1"
-		processing="stop" />
 	<rule>
 		<note>重写index.jsp成index.html</note>
 		<!-- 对应controller中redireact的路径 -->
