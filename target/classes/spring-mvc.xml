@@ -57,5 +57,12 @@
 		<!-- 内存中的最大值 -->
 		<property name="maxInMemorySize" value="40960" />
 	</bean>
-
+	<!-- 拦截器 -->
+	<!-- 多个拦截器，顺序执行 登录认证拦截器 -->
+	<mvc:interceptors>
+		<mvc:interceptor>
+			<mvc:mapping path="/**" />
+			<bean class="cn.fishling.framwork.CommonIntercepter" />
+		</mvc:interceptor>
+	</mvc:interceptors>
 </beans>    
