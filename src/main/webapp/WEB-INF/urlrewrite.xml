@@ -12,4 +12,8 @@
 		<from>login.html</from>
 		<to type="forward">/login.jsp</to>
 	</rule>
+	<rule>
+		<from>register.html</from>
+		<to type="forward">/register.jsp</to>
+	</rule>
 </urlrewrite>
