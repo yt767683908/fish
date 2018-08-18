@@ -17,7 +17,7 @@ import com.alibaba.fastjson.JSON;
 import cn.fishling.business.service.LoginService;
 
 @Controller
-@RequestMapping(value = "/api/user", produces = "application/json; charset=utf-8")
+@RequestMapping(value = "/api/user")
 public class LoginController {
 
 	@Resource
