@@ -18,4 +18,12 @@
 			and id=${id}
 		</if>
 	</select>
+	
+	<insert id="userRegister" useGeneratedKeys="true" parameterType="map">
+		INSERT INTO user_acount ( username, password, realname, phone, 
+			valid_sta, email, user_id, create_user, create_time )
+		VALUES
+			( '${username}','${password}', '${realname}', '${phone}', '${valid_sta}', 
+			'${email}', '${user_id}', '${create_user}', SYSDATE( ) )
+	</insert>
 </mapper>

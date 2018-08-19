@@ -8,4 +8,6 @@ public interface LoginService {
 	List<Map<String,Object>> findUserList();
 	
 	Map<String, Object> userLogin(Map<String, String> map);
+	
+	int userRegister(Map<String, String> map);
 }

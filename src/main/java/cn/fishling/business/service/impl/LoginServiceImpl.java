@@ -9,6 +9,7 @@ import org.springframework.stereotype.Service;
 
 import cn.fishling.business.dao.LoginMapper;
 import cn.fishling.business.service.LoginService;
+import tools.Tools;
 
 @Service("loginService")
 public class LoginServiceImpl implements LoginService {
@@ -21,6 +22,19 @@ public class LoginServiceImpl implements LoginService {
 
 	public Map<String, Object> userLogin(Map<String, String> map) {
 		return loginMapper.userLogin(map);
+	}
+
+	public int userRegister(Map<String, String> map) {
+		String password=map.get("password");
+		//获取加密后的密码
+		String jm_psd=Tools.md5(password);
+		String userId=Tools.getRdUsrid();
+		map.put("password", jm_psd);
+		map.put("realname", map.get("username"));
+		map.put("valid_sta", "A");
+		map.put("user_id", userId);
+		map.put("create_user", userId);
+		return loginMapper.userRegister(map);
 	}
 
 }

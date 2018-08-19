@@ -10,6 +10,8 @@
 hahahahahah
   <script src="js/jquery-3.3.1.js"></script>
   <script type="text/javascript">
+  var usrId='${request.session.usrId}';
+  alert(usrId);
   	$(function(){
 		$.ajax({
 			url:'loginController/showPerson',
