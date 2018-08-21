@@ -8,6 +8,7 @@ import javax.annotation.Resource;
 import org.springframework.stereotype.Service;
 
 import cn.fishling.business.dao.LoginMapper;
+import cn.fishling.business.dto.UserInfo;
 import cn.fishling.business.service.LoginService;
 import tools.Tools;
 
@@ -20,7 +21,8 @@ public class LoginServiceImpl implements LoginService {
 		return loginMapper.findUserList();
 	}
 
-	public Map<String, Object> userLogin(Map<String, String> map) {
+	public UserInfo userLogin(Map<String, String> map) {
+		map.put("jmPwd", Tools.md5(map.get("password")));
 		return loginMapper.userLogin(map);
 	}
 
@@ -35,6 +37,10 @@ public class LoginServiceImpl implements LoginService {
 		map.put("user_id", userId);
 		map.put("create_user", userId);
 		return loginMapper.userRegister(map);
+	}
+
+	public UserInfo getUser(Map<String, String> map) {
+		return loginMapper.getUser(map);
 	}
 
 }

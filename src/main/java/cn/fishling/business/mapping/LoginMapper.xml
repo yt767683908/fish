@@ -6,8 +6,19 @@
 		select * from user_acount
 	</select>
 
-	<select id="userLogin" resultType="map" parameterType="map">
+	<select id="userLogin" resultType="cn.fishling.business.dto.UserInfo" parameterType="map">
 		select * from user_acount where 1=1
+			and (username=#{username} and password=#{password}) 
+			or (username=#{username} and password=#{jmPwd})
+	</select>
+	
+	<select id="getUser" resultType="cn.fishling.business.dto.UserInfo" parameterType="map">
+		SELECT
+			u.*,
+			ifNUll( DATE_FORMAT( create_time, '%Y-%m-%d %H:%m:%s' ), '' ) AS createTime,
+			ifNUll( DATE_FORMAT( last_modified, '%Y-%m-%d %H:%m:%s' ), '' ) AS lastTime 
+		FROM
+			user_acount u where 1=1
 		<if test="username!=null and username!=''">
 			and username=#{username}
 		</if>

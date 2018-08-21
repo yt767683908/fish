@@ -5,12 +5,16 @@
 <head>
 <meta charset="UTF-8">
 <title>网站注册</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="">
+<meta name="author" content="">
 <jsp:include page="javascript.jsp"></jsp:include>
 </head>
 <body
 	style="width: 100%; height: 100%; background: url('img/register-bg.jpg') no-repeat; background-size: cover;">
 	<h1 style="text-align: center;">用户注册</h1>
-	<div style="width: 360px; margin: 100px auto;">
+	<div style="width: 300px; margin: 150px auto;">
 		<form class="bs-example bs-example-form" role="form" action="api/user/userRegister" method="post">
 			<div class="input-group">
 				<span class="input-group-addon"><i
