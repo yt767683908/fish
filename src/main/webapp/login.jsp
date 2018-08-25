@@ -12,8 +12,14 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="description" content="">
 <meta name="author" content="">
+<link rel="icon" href="/fish/img/favicon.ico">
 <link rel="stylesheet" href="/fish/css/login.css" />
-<jsp:include page="javascript.jsp"></jsp:include>
+<link rel="stylesheet"
+	href="/fish/webFrame/bootstrap/css/bootstrap.min.css" />
+	<script type="text/javascript" src="/fish/js/jquery-3.3.1.js"
+	type="text/javascript" charset="UTF-8"></script>
+<script type="text/javascript"
+	src="/fish/webFrame/bootstrap/js/bootstrap.min.js" charset="UTF-8"></script>
 </head>
 <body>
 	<form class="form-signin">
@@ -59,7 +65,7 @@
 					},
 					success : function(data) {
 						if (data.status == 0) {
-							window.location.href = "jsp/mainIndex.jsp";
+							window.location.href = "home.html";
 						} else {
 							$("#err").html(data.msg);
 						}

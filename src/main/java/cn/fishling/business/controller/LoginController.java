@@ -30,8 +30,13 @@ public class LoginController {
 	@ResponseBody
 	@RequestMapping("/showPerson")
 	public String showPersons(@RequestParam Map<String, String> map) {
+		Map<String, Object> result = new HashMap<String, Object>();
 		List<Map<String, Object>> resultMap = loginService.findUserList();
-		return JSON.toJSONString(resultMap);
+		result.put("data", resultMap);
+		result.put("count", "100");
+		result.put("code", "0");
+		result.put("msg", "");
+		return JSON.toJSONString(result);
 	}
 
 	@ResponseBody

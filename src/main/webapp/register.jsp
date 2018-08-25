@@ -10,7 +10,13 @@
 <meta name="description" content="">
 <meta name="author" content="">
 <link rel="stylesheet" href="/fish/css/login.css" />
-<jsp:include page="javascript.jsp"></jsp:include>
+<link rel="stylesheet" href="/fish/css/login.css" />
+<link rel="stylesheet"
+	href="/fish/webFrame/bootstrap/css/bootstrap.min.css" />
+	<script type="text/javascript" src="/fish/js/jquery-3.3.1.js"
+	type="text/javascript" charset="UTF-8"></script>
+<script type="text/javascript"
+	src="/fish/webFrame/bootstrap/js/bootstrap.min.js" charset="UTF-8"></script>
 </head>
 <body>
 	<!-- 	<h1 style="text-align: center;">用户注册</h1>
