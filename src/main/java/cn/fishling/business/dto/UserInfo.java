@@ -1,6 +1,5 @@
 package cn.fishling.business.dto;
 
-
 /**
  * 用户信息实体类
  * 
@@ -9,16 +8,16 @@ package cn.fishling.business.dto;
  */
 public class UserInfo {
 	private Integer no;
-	private String user_id;
-	private String create_user;
-	private String createTime;
-	private String modifier;
-	private String lastTime;
+	private String userid;
+	private String createuser;
+	private String createtime;
+	private String updateuser;
+	private String updatetime;
 	private String username;
 	private String realname;
 	private String phone;
 	private String email;
-	private String valid_sta;
+	private String valid;
 
 	public Integer getNo() {
 		return no;
@@ -28,44 +27,44 @@ public class UserInfo {
 		this.no = no;
 	}
 
-	public String getUser_id() {
-		return user_id;
+	public String getUserid() {
+		return userid;
 	}
 
-	public void setUser_id(String user_id) {
-		this.user_id = user_id;
+	public void setUserid(String userid) {
+		this.userid = userid;
 	}
 
-	public String getCreate_user() {
-		return create_user;
+	public String getCreateuser() {
+		return createuser;
 	}
 
-	public void setCreate_user(String create_user) {
-		this.create_user = create_user;
+	public void setCreateuser(String createuser) {
+		this.createuser = createuser;
 	}
 
-	public String getCreateTime() {
-		return createTime;
+	public String getCreatetime() {
+		return createtime;
 	}
 
-	public void setCreateTime(String createTime) {
-		this.createTime = createTime;
+	public void setCreatetime(String createtime) {
+		this.createtime = createtime;
 	}
 
-	public String getModifier() {
-		return modifier;
+	public String getUpdateuser() {
+		return updateuser;
 	}
 
-	public void setModifier(String modifier) {
-		this.modifier = modifier;
+	public void setUpdateuser(String updateuser) {
+		this.updateuser = updateuser;
 	}
 
-	public String getLastTime() {
-		return lastTime;
+	public String getUpdatetime() {
+		return updatetime;
 	}
 
-	public void setLastTime(String lastTime) {
-		this.lastTime = lastTime;
+	public void setUpdatetime(String updatetime) {
+		this.updatetime = updatetime;
 	}
 
 	public String getUsername() {
@@ -100,28 +99,28 @@ public class UserInfo {
 		this.email = email;
 	}
 
-	public String getValid_sta() {
-		return valid_sta;
+	public String getValid() {
+		return valid;
 	}
 
-	public void setValid_sta(String valid_sta) {
-		this.valid_sta = valid_sta;
+	public void setValid(String valid) {
+		this.valid = valid;
 	}
 
-	public UserInfo(Integer no, String user_id, String create_user, String createTime, String modifier,
-			String lastTime, String username, String realname, String phone, String email, String valid_sta) {
+	public UserInfo(Integer no, String userid, String createuser, String createtime, String updateuser,
+			String updatetime, String username, String realname, String phone, String email, String valid) {
 		super();
 		this.no = no;
-		this.user_id = user_id;
-		this.create_user = create_user;
-		this.createTime = createTime;
-		this.modifier = modifier;
-		this.lastTime = lastTime;
+		this.userid = userid;
+		this.createuser = createuser;
+		this.createtime = createtime;
+		this.updateuser = updateuser;
+		this.updatetime = updatetime;
 		this.username = username;
 		this.realname = realname;
 		this.phone = phone;
 		this.email = email;
-		this.valid_sta = valid_sta;
+		this.valid = valid;
 	}
 
 	public UserInfo() {

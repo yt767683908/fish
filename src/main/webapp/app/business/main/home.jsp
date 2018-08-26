@@ -94,7 +94,7 @@ a:hover {
 
 		<div class="layui-body" style="overflow: hidden;">
 			<!-- 内容主体区域 -->
-			<iframe id="iframe" name="iframe" scrolling="yes" frameborder="0" width="100%" height="100%" src="app/business/main/userCenter.jsp"></iframe>
+			<iframe id="iframe" name="iframe" scrolling="yes" frameborder="0" width="100%" height="100%" src="app/business/main/userInfo.jsp"></iframe>
 		</div>
 
 		<div class="layui-footer">

@@ -14,7 +14,7 @@ $(function() {
 			console.log(data);
 			var html = "";
 			for (var i = 0; i < data.length; i++) {
-				html += '<tr>' + '<td>' + data[i].user_id + '</td>' + '<td>'
+				html += '<tr>' + '<td>' + data[i].userid + '</td>' + '<td>'
 						+ data[i].username + '</td>' + '<td>'
 						+ data[i].realname + '</td>' + '<td>' + data[i].phone
 						+ '</td>' + '<td>' + data[i].email + '</td>' + '</tr>';

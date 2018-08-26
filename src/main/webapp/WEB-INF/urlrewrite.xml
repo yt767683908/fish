@@ -16,8 +16,12 @@
 		<from>register.html</from>
 		<to type="forward">/register.jsp</to>
 	</rule>
-		<rule>
+	<rule>
 		<from>home.html</from>
 		<to type="forward">/app/business/main/home.jsp</to>
+	</rule>
+	<rule>
+		<from>socket.html</from>
+		<to type="forward">/app/websocket/websocket.jsp</to>
 	</rule>
 </urlrewrite>

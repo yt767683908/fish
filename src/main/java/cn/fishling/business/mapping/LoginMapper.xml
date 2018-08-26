@@ -3,20 +3,17 @@
 <mapper namespace="cn.fishling.business.dao.LoginMapper">
 	<!-- 查询所有person -->
 	<select id="findUserList" resultType="map">
-		select * from user_acount
+		select *
+		from user_acount
 	</select>
 
 	<select id="userLogin" resultType="cn.fishling.business.dto.UserInfo" parameterType="map">
-		select * from user_acount where 1=1
-			and (username=#{username} and password=#{password}) 
-			or (username=#{username} and password=#{jmPwd})
+		select * from user_acount where username=#{username} and password=#{password}
 	</select>
 	
 	<select id="getUser" resultType="cn.fishling.business.dto.UserInfo" parameterType="map">
 		SELECT
-			u.*,
-			ifNUll( DATE_FORMAT( create_time, '%Y-%m-%d %H:%m:%s' ), '' ) AS createTime,
-			ifNUll( DATE_FORMAT( last_modified, '%Y-%m-%d %H:%m:%s' ), '' ) AS lastTime 
+			*
 		FROM
 			user_acount u where 1=1
 		<if test="username!=null and username!=''">
@@ -32,7 +29,7 @@
 	
 	<insert id="userRegister" useGeneratedKeys="true" parameterType="map">
 		INSERT INTO user_acount ( username, password, realname, phone, 
-			valid_sta, email, user_id, create_user, create_time )
+			valid, email, userid, createuser, createtime )
 		VALUES
 			( '${username}','${password}', '${realname}', '${phone}', '${valid_sta}', 
 			'${email}', '${user_id}', '${create_user}', SYSDATE( ) )

@@ -111,9 +111,9 @@
 				,
 				cols : [ [ //表头
 				{
-					field : 'no',
+					field : 'userid',
 					title : 'ID',
-					width : 80,
+					width : 120,
 					sort : true,
 					fixed : 'left'
 				}, {
@@ -128,21 +128,20 @@
 				}, {
 					field : 'email',
 					title : '邮箱',
-					width : 100
+					width : 200
 				}, {
 					field : 'phone',
 					title : '手机号码',
-					width : 100
+					width : 160
 				}, {
-					field : 'create_time',
+					field : 'createtime',
 					title : '建立时间',
 					width : 120,
 					sort : true
 				}, {
-					field : 'create_user',
+					field : 'createuser',
 					title : '创建人',
-					width : 120,
-					sort : true
+					width : 120
 				} ,{fixed: 'right', width: 165, align:'center', toolbar: '#barDemo'}] ]
 			});
 

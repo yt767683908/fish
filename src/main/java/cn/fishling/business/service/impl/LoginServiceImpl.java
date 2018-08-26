@@ -22,15 +22,16 @@ public class LoginServiceImpl implements LoginService {
 	}
 
 	public UserInfo userLogin(Map<String, String> map) {
-		map.put("jmPwd", Tools.md5(map.get("password")));
+		String md5Pwd = Tools.md5(map.get("password"));
+		map.put("password", md5Pwd);
 		return loginMapper.userLogin(map);
 	}
 
 	public int userRegister(Map<String, String> map) {
-		String password=map.get("password");
-		//获取加密后的密码
-		String jm_psd=Tools.md5(password);
-		String userId=Tools.getRdUsrid();
+		String password = map.get("password");
+		// 获取加密后的密码
+		String jm_psd = Tools.md5(password);
+		String userId = Tools.getRdUsrid();
 		map.put("password", jm_psd);
 		map.put("realname", map.get("username"));
 		map.put("valid_sta", "A");
