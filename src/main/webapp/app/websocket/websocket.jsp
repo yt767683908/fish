@@ -8,7 +8,7 @@
 <jsp:include page="/javascript.jsp"></jsp:include>
 <script type="text/javascript">
 	$(function() {
-		var url = "ws://localhost:8080/fish/websocket";
+		var url = "ws://localhost:8080/fish/api/websocket";
 		var ws = "";
 		var message = {
 			"id" : "",

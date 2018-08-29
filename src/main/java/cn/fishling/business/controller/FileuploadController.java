@@ -6,6 +6,7 @@ import java.io.File;
 import java.io.FileInputStream;
 import java.io.IOException;
 import java.io.InputStream;
+import java.io.OutputStream;
 import java.net.URLEncoder;
 
 import javax.servlet.http.HttpServletRequest;
@@ -32,7 +33,7 @@ public class FileuploadController {
 	public String upload(MultipartFile file, HttpServletRequest request) throws IOException {
 		String path = request.getSession().getServletContext().getRealPath("upload");
 		String fileName = file.getOriginalFilename();
-		File dir = new File(path, fileName);
+		File dir = new File("E:\\fileSaveServer", fileName);
 		if (!dir.exists()) {
 			dir.mkdirs();
 		}
@@ -69,6 +70,33 @@ public class FileuploadController {
 			out.flush();
 		}
 		out.close();
+	}
+
+	/*
+	 * 在线预览图片
+	 */
+	@RequestMapping("/showImage")
+	@ResponseBody
+	public void showImage(String path, HttpServletResponse response) throws IOException {
+		response.setContentType("text/html; charset=UTF-8");
+		response.setContentType("image/jpg");
+		File f = new File("E:\\fileSaveServer", "52589b67b283d21d6367e14a7d14a6ce.jpg");
+		FileInputStream fis = new FileInputStream(f);
+		OutputStream os = response.getOutputStream();
+		try {
+			int count = 0;
+			byte[] buffer = new byte[1024 * 1024];
+			while ((count = fis.read(buffer)) != -1)
+				os.write(buffer, 0, count);
+			os.flush();
+		} catch (IOException e) {
+			e.printStackTrace();
+		} finally {
+			if (os != null)
+				os.close();
+			if (fis != null)
+				fis.close();
+		}
 	}
 
 }
