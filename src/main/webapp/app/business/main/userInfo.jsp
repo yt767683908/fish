@@ -17,7 +17,7 @@
 		<i class="layui-icon"></i>
 		<p>点击上传，或将文件拖拽到此处</p>
 	</div>
-	<img alt="" src="/fish/api/file/showImage">
+<!-- 	<img alt="" src="/fish/api/file/showImage"> -->
 	<script type="text/javascript">
 	layui.use('upload', function(){
 		  var $ = layui.jquery
