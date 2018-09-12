@@ -30,6 +30,7 @@ public class LoginController {
 	@ResponseBody
 	@RequestMapping("/showPerson")
 	public String showPersons(@RequestParam Map<String, String> map) {
+		var str="";
 		Map<String, Object> result = new HashMap<String, Object>();
 		List<Map<String, Object>> resultMap = loginService.findUserList();
 		result.put("data", resultMap);
