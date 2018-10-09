@@ -36,6 +36,9 @@
 		<p style="text-align: center; margin-top: 10px;">
 			还没有账户？点击<a href="register.html">注册</a>
 		</p>
+		<p><a href="#" target="_blank"><img alt="QQ" src="/fish/img/bt_blue_76X24.png"></a>
+		<a href="#" target="_blank"><img alt="WX" src="/fish/img/icon24_wx_button.png"></a>
+		</p>
 		<p class="mt-5 mb-3 text-muted">&copy; 2017-2018</p>
 	</form>
 </body>
