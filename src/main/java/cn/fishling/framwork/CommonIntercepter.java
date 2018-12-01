@@ -21,8 +21,7 @@ public class CommonIntercepter implements HandlerInterceptor {
 	public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object handler)
 			throws Exception {
 		UserInfo userInfo = (UserInfo) request.getSession().getAttribute("userInfo");
-
-		if (userInfo == null && request.getRequestURI().indexOf("jsp") != -1) {
+		if (userInfo == null && request.getRequestURI().indexOf("api") == -1) {
 			response.sendRedirect("/login.html");
 			return false;
 		}
