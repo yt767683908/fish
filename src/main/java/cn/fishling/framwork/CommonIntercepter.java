@@ -20,11 +20,11 @@ public class CommonIntercepter implements HandlerInterceptor {
 	// 在拦截点执行前拦截，如果返回true则不执行拦截点后的操作（拦截成功）
 	public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object handler)
 			throws Exception {
-		UserInfo userInfo = (UserInfo) request.getSession().getAttribute("userInfo");
-		if (userInfo == null && request.getRequestURI().indexOf("api") == -1) {
-			response.sendRedirect("/login.html");
-			return false;
-		}
+//		UserInfo userInfo = (UserInfo) request.getSession().getAttribute("userInfo");
+//		if (userInfo == null && request.getRequestURI().indexOf("api") == -1) {
+//			response.sendRedirect("/login.html");
+//			return false;
+//		}
 		return true;
 	}
 

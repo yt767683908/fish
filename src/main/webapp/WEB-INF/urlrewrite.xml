@@ -24,4 +24,8 @@
 		<from>socket.html</from>
 		<to type="forward">/app/websocket/websocket.jsp</to>
 	</rule>
+	<rule>
+		<from>^/userinfo/(.*).html?(.*)$</from>
+		<to type="forward">/app/business/main/userInfo.jsp</to>
+	</rule>
 </urlrewrite>
